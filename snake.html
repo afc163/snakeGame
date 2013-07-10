@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>贪吃蛇 1.0</title>
+		<style type="text/css">
+			body{
+				text-align:center;
+			}
+			#win{
+				margin:40px auto 10px;
+				width:600px;
+				height:400px;
+				background:#000 url(bg.png) top right;
+				position:relative;
+				overflow:hidden;
+				text-align:center;
+			}
+			#win .start{
+				margin-top:350px;
+				color:#888;
+			}
+			#win .node{
+				background:#579D58;
+				border:1px solid #004000;
+			}
+			#win .apple{
+				background:orange;
+				border:1px solid #000;
+			}
+			#win #show-score
+			{
+				position:absolute;
+				top:12px;
+				right:10px;
+				color:#bbb;
+				font-size:12px;
+				font-weight:bold;
+				z-index:100;
+			}
+			#win #show-hcore
+			{
+				position:absolute;
+				top:36px;
+				right:10px;
+				color:#bbb;
+				font-size:12px;
+				font-weight:bold;
+				z-index:100;
+			}
+			#start{
+				margin-bottom:70px;
+			}
+		</style>
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="snake.js"></script>
+	</head>
+
+	<body>
+		<div id="win"><div class="start">请点击下面按钮或回车开始游戏。</div></div>
+		<input type="button" id="start" value="开始游戏" onclick="snakeGame.start();" />
+		<p><a href="http://pianyou.me/">返回足迹偏右</a></p>
+	</body>
+	<script type="text/javascript">
+		$AJS.$("start").focus();
+	</script>
+</html>
